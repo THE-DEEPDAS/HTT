@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'https://huggingface.co/spaces/TheDeepDas/HTT',
+        target: 'https://thedeepdas-htt.hf.space',
         changeOrigin: true,
       }
     }

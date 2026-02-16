@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://huggingface.co/spaces/TheDeepDas/HTT/api';
+const API_BASE_URL = 'https://thedeepdas-htt.hf.space/api';
 
 // Separate axios instance for admin calls (uses adminToken)
 const adminApi = axios.create({

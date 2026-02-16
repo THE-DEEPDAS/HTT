@@ -58,7 +58,7 @@ src/
 ### Prerequisites
 
 - Node.js 16+ and npm/yarn installed
-- Django backend running on [https://huggingface.co/spaces/TheDeepDas/HTT](https://huggingface.co/spaces/TheDeepDas/HTT)
+- Django backend running on [https://thedeepdas-htt.hf.space](https://thedeepdas-htt.hf.space)
 
 ### Installation
 
@@ -139,7 +139,7 @@ The frontend expects the Django backend to provide these API endpoints:
 
 The API base URL is configured in `src/services/api.js`:
 ```javascript
-const API_BASE_URL = 'https://huggingface.co/spaces/TheDeepDas/HTT/api';
+const API_BASE_URL = 'https://thedeepdas-htt.hf.space/api';
 ```
 
 Update this if your backend runs on a different URL.
