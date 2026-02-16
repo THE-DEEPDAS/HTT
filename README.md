@@ -58,7 +58,7 @@ src/
 ### Prerequisites
 
 - Node.js 16+ and npm/yarn installed
-- Django backend running on `http://localhost:8000`
+- Django backend running on [https://huggingface.co/spaces/TheDeepDas/HTT](https://huggingface.co/spaces/TheDeepDas/HTT)
 
 ### Installation
 
@@ -139,7 +139,7 @@ The frontend expects the Django backend to provide these API endpoints:
 
 The API base URL is configured in `src/services/api.js`:
 ```javascript
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'https://huggingface.co/spaces/TheDeepDas/HTT/api';
 ```
 
 Update this if your backend runs on a different URL.
