@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fafbfc;
+    color: #1a1a2e;
+  }
+
+  ::selection {
+    background-color: rgba(59, 130, 246, 0.15);
+    color: #1e40af;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 100px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  .glass-dark {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           px-6 py-2.5 text-white font-medium rounded-xl
+           transition-all duration-200 ease-out
+           shadow-sm hover:shadow-md
+           focus:outline-none focus:ring-2 focus:ring-offset-2;
+    background-color: theme('colors.primary.600');
+    --tw-ring-color: theme('colors.primary.500');
+  }
+  .btn-primary:hover {
+    background-color: theme('colors.primary.700');
+    --tw-shadow-color: theme('colors.primary.200');
+  }
+  .btn-primary:active {
+    background-color: theme('colors.primary.800');
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           px-6 py-2.5 bg-white text-gray-700 font-medium rounded-xl
+           border border-gray-200 hover:border-gray-300
+           hover:bg-gray-50 active:bg-gray-100
+           transition-all duration-200 ease-out
+           focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2
+           px-4 py-2 text-gray-600 font-medium rounded-xl
+           hover:bg-gray-100 active:bg-gray-200
+           transition-all duration-200 ease-out;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2
+           px-6 py-2.5 bg-red-500 text-white font-medium rounded-xl
+           hover:bg-red-600 active:bg-red-700
+           transition-all duration-200 ease-out
+           shadow-sm hover:shadow-md hover:shadow-red-200
+           focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-gray-100/50
+           transition-all duration-300 ease-out;
+    box-shadow: theme('boxShadow.card');
+  }
+
+  .card-hover {
+    @apply card hover:-translate-y-1;
+  }
+  .card-hover:hover {
+    box-shadow: theme('boxShadow.elevated');
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-xl
+           text-gray-900 placeholder-gray-400
+           focus:outline-none focus:ring-2
+           transition-all duration-200;
+    background-color: theme('colors.surface.50');
+  }
+  .input-field:focus {
+    --tw-ring-color: theme('colors.primary.500 / 20%');
+    border-color: theme('colors.primary.500');
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply badge;
+    background-color: theme('colors.primary.50');
+    color: theme('colors.primary.700');
+  }
+
+  .badge-success {
+    @apply badge bg-emerald-50 text-emerald-700;
+  }
+
+  .badge-warning {
+    @apply badge bg-amber-50 text-amber-700;
+  }
+
+  .badge-danger {
+    @apply badge bg-red-50 text-red-700;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+  }
+
+  .page-title {
+    @apply text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight;
+  }
+
+  .section-title {
+    @apply text-lg font-semibold text-gray-900;
+  }
+
+  .skeleton {
+    @apply bg-gray-200 rounded-xl animate-pulse;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(to right, #2563eb, #60a5fa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
