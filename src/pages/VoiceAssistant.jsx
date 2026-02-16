@@ -21,7 +21,7 @@ const VoiceAssistant = () => {
   const sessionIdRef = useRef(null);
   const currentStepRef = useRef('greeting');
 
-  const apiUrl = import.meta.env.VITE_VOICE_API || `${window.location.origin}/api/voice`;
+  const apiUrl = import.meta.env.VITE_VOICE_API || 'https://thedeepdas-htt.hf.space/api/voice';
 
   // ── Browser TTS helper ──────────────────────────────────────────
   const browserSpeak = (text) => {
